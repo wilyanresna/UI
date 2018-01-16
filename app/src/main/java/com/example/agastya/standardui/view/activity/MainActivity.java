@@ -1,5 +1,6 @@
 package com.example.agastya.standardui.view.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,8 @@ public class MainActivity extends BaseActivity {
         buttonDrawer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Utils.showToast(MainActivity.this, "Drawer");
+                Intent intent = new Intent(MainActivity.this, DrawerActivity.class);
+                startActivity(intent);
             }
         });
     }
